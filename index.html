@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pemilihan Ketua Koperasi — RAT 2026</title>
+<meta name="description" content="Sistem pemilihan Ketua Koperasi dalam Rapat Anggota Tahunan 2026">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="logo">K</div><div><strong>KOPERASI</strong><span>RAT 2026</span></div></div>
+  <nav><a href="#beranda">Beranda</a><a href="#agenda">Agenda</a><a href="#calon">Calon</a><a href="#pemilihan">Pemilihan</a><a href="#hasil">Hasil</a></nav>
+  <a class="btn btn-small" href="#pemilihan">Mulai Memilih</a>
+</header>
+
+<main>
+<section id="beranda" class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">RAPAT ANGGOTA TAHUNAN 2026</span>
+    <h1>Pemilihan<br><em>Ketua Koperasi</em></h1>
+    <p>Portal resmi untuk pelaksanaan pemilihan Ketua Koperasi secara tertib, transparan, dan terdokumentasi.</p>
+    <div class="actions"><a class="btn" href="#pemilihan">Masuk ke Pemilihan</a><a class="btn btn-ghost" href="#agenda">Lihat Agenda</a></div>
+    <div class="status"><i></i> Pemilihan dibuka · 24 September 2026</div>
+  </div>
+  <div class="hero-card">
+    <div class="card-label">AGENDA UTAMA</div>
+    <h3>RAT Koperasi 2026</h3>
+    <div class="date">24 <b>SEP</b><span>2026</span></div>
+    <p>Lokasi: <strong>Gedung Pertemuan Koperasi</strong></p>
+    <p>Waktu: <strong>09.00 WIB — selesai</strong></p>
+  </div>
+</section>
+
+<section id="agenda" class="section">
+  <div class="section-head"><span class="eyebrow">01 · AGENDA</span><h2>Rangkaian Rapat Anggota Tahunan</h2></div>
+  <div class="timeline">
+    <div><b>08.30</b><span>Registrasi anggota & verifikasi hak suara</span></div>
+    <div><b>09.00</b><span>Pembukaan RAT 2026</span></div>
+    <div><b>09.30</b><span>Pemaparan laporan pertanggungjawaban pengurus</span></div>
+    <div><b>10.30</b><span>Pemaparan visi dan program calon Ketua</span></div>
+    <div class="active"><b>11.00</b><span><strong>Pemilihan Ketua Koperasi 2026</strong></span></div>
+    <div><b>12.00</b><span>Penghitungan & pengesahan hasil pemilihan</span></div>
+  </div>
+</section>
+
+<section id="calon" class="section alt">
+  <div class="section-head"><span class="eyebrow">02 · CALON</span><h2>Daftar Calon Ketua Koperasi</h2><p>Data berikut adalah contoh dan dapat diganti pada file <code>app.js</code>.</p></div>
+  <div id="candidateGrid" class="candidate-grid"></div>
+</section>
+
+<section id="pemilihan" class="section">
+  <div class="section-head"><span class="eyebrow">03 · SURAT SUARA</span><h2>Pemilihan Ketua Koperasi</h2><p>Masukkan nomor anggota untuk verifikasi, lalu pilih satu calon.</p></div>
+  <div class="voting-wrap">
+    <div class="login-panel">
+      <label>Nomor Anggota</label>
+      <input id="memberId" placeholder="Contoh: KOP-0001">
+      <label>PIN Pemilih</label>
+      <input id="pin" type="password" placeholder="••••••">
+      <button class="btn full" onclick="verifyVoter()">Verifikasi Pemilih</button>
+      <div id="verifyMsg" class="msg"></div>
+      <small>Demo: gunakan <b>KOP-0001</b> dan PIN <b>123456</b>.</small>
+    </div>
+    <div id="ballot" class="ballot disabled">
+      <div class="ballot-head"><span>Surat Suara</span><strong id="voterName">Belum diverifikasi</strong></div>
+      <div id="candidateChoices"></div>
+      <button class="btn full" onclick="submitVote()">Kirim Suara</button>
+      <div id="voteMsg" class="msg"></div>
+    </div>
+  </div>
+</section>
+
+<section id="hasil" class="section alt">
+  <div class="section-head"><span class="eyebrow">04 · REKAP</span><h2>Rekapitulasi Suara</h2><p>Untuk versi produksi, hasil sebaiknya dibaca dari database/server, bukan penyimpanan browser.</p></div>
+  <div id="results" class="results"></div>
+  <div class="notice">⚠️ Tampilan ini menggunakan data demo lokal. Jangan digunakan sebagai sistem pemilu resmi sebelum backend, autentikasi, audit log, dan kontrol satu anggota-satu suara dipasang.</div>
+</section>
+</main>
+
+<footer><div><strong>KOPERASI · RAT 2026</strong><p>Portal Pemilihan Ketua Koperasi</p></div><div>Dokumen & ketentuan pemilihan mengikuti keputusan RAT dan AD/ART koperasi.</div></footer>
+<script src="app.js"></script>
+</body>
+</html>
